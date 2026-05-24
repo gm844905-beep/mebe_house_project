@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Оформление заказа</h1>
+            
+            <div class="order-layout">
+                <div class="order-form-block">
+                    <form id="orderForm">
+                        <div class="form-section">
+                            <h3>Контактные данные</h3>
+                            <div class="form-row-group">
+                                <div class="form-row">
+                                    <input type="text" id="firstName" placeholder="Имя" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" id="lastName" placeholder="Фамилия" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" id="phone" placeholder="Телефон" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="email" id="email" placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Адрес доставки</h3>
+                            <div class="form-row">
+                                <input type="text" id="city" placeholder="Город" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="street" placeholder="Улица" required>
+                            </div>
+                            <div class="form-row-group">
+                                <div class="form-row">
+                                    <input type="text" id="house" placeholder="Дом" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" id="apartment" placeholder="Квартира">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="entrance" placeholder="Подъезд (при наличии)">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Способ оплаты</h3>
+                            <div class="payment-methods">
+                                <label><input type="radio" name="payment" value="cash" checked> Наличные курьеру</label>
+                                <label><input type="radio" name="payment" value="card"> Картой онлайн</label>
+                                <label><input type="radio" name="payment" value="bank"> Безналичный расчет</label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Комментарий к заказу</h3>
+                            <div class="form-row">
+                                <textarea id="comment" rows="4" placeholder="Дополнительная информация, пожелания по доставке"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">Подтвердить заказ</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Ваш заказ</h3>
+                    <div id="orderItemsList"></div>
+                    <div class="order-total">
+                        <div class="summary-row">
+                            <span>Товары:</span>
+                            <span id="orderSubtotal">0 ₽</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Доставка:</span>
+                            <span id="orderDelivery">0 ₽</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Итого к оплате:</span>
+                            <span id="orderTotal">0 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        function renderOrderItems() {
+            const cart = JSON.parse(localStorage.getItem('mebelhome_cart')) || [];
+            const container = document.getElementById('orderItemsList');
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="cart-empty">Корзина пуста. Добавьте товары перед оформлением заказа.</p>';
+                document.getElementById('orderSubtotal').textContent = '0 ₽';
+                document.getElementById('orderDelivery').textContent = '0 ₽';
+                document.getElementById('orderTotal').textContent = '0 ₽';
+                return;
+            }
+            
+            let html = '';
+            cart.forEach(item => {
+                html += `
+                    <div class="order-item">
+                        <div class="order-item-info">
+                            <span class="order-item-name">${item.name}</span>
+                            <span class="order-item-quantity">x ${item.quantity}</span>
+                        </div>
+                        <div class="order-item-price">${(item.price * item.quantity).toLocaleString()} ₽</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+            
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const delivery = subtotal >= 50000 ? 0 : 1500;
+            const total = subtotal + delivery;
+            
+            document.getElementById('orderSubtotal').textContent = subtotal.toLocaleString() + ' ₽';
+            document.getElementById('orderDelivery').textContent = delivery === 0 ? 'Бесплатно' : delivery.toLocaleString() + ' ₽';
+            document.getElementById('orderTotal').textContent = total.toLocaleString() + ' ₽';
+        }
+        
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const city = document.getElementById('city').value;
+            const street = document.getElementById('street').value;
+            const house = document.getElementById('house').value;
+            
+            if (!firstName || !lastName || !phone || !email || !city || !street || !house) {
+                alert('Пожалуйста, заполните все обязательные поля');
+                return;
+            }
+            
+            const cart = JSON.parse(localStorage.getItem('mebelhome_cart')) || [];
+            if (cart.length === 0) {
+                alert('Корзина пуста. Добавьте товары перед оформлением заказа.');
+                window.location.href = 'cart.html';
+                return;
+            }
+            
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const delivery = subtotal >= 50000 ? 0 : 1500;
+            const total = subtotal + delivery;
+            
+            const orderData = {
+                customer: { firstName, lastName, phone, email },
+                address: { city, street, house, apartment: document.getElementById('apartment').value, entrance: document.getElementById('entrance').value },
+                payment: document.querySelector('input[name="payment"]:checked').value,
+                comment: document.getElementById('comment').value,
+                items: cart,
+                totals: { subtotal, delivery, total },
+                date: new Date().toLocaleString()
+            };
+            
+            localStorage.setItem('mebelhome_last_order', JSON.stringify(orderData));
+            localStorage.removeItem('mebelhome_cart');
+            
+            window.location.href = 'order-success.html';
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof updateCartCount === 'function') updateCartCount();
+            renderOrderItems();
+        });
+    </script>
+</body>
+</html>

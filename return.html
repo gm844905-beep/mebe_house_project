@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Возврат товара — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li><a href="cart.html" class="nav__link">Корзина</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__icons">
+                <a href="cart.html" class="icon-link">
+                    <img src="images/icons/cart.svg" alt="Корзина" class="icon-img">
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Возврат товара</h1>
+            
+            <div class="return-rules">
+                <div class="rule-card">
+                    <h3>Срок возврата</h3>
+                    <p>30 дней с момента получения заказа. Мебель должна быть в товарном виде.</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Условия возврата</h3>
+                    <p>Товар не должен быть в употреблении, сохранены фабричные упаковки и пломбы.</p>
+                </div>
+                <div class="rule-card">
+                    <h3>Возврат денег</h3>
+                    <p>Деньги возвращаются в течение 10 дней на карту или счет.</p>
+                </div>
+            </div>
+
+            <div class="return-form">
+                <h2>Заявка на возврат</h2>
+                <p class="form-subtitle">Заполните форму, и мы свяжемся с вами в течение 24 часов</p>
+                
+                <form class="return-form-fields" onsubmit="return validateReturnForm()">
+                    <div class="form-row-group">
+                        <div class="form-row">
+                            <input type="text" id="returnName" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" id="returnPhone" placeholder="Телефон" required>
+                        </div>
+                    </div>
+                    <div class="form-row-group">
+                        <div class="form-row">
+                            <input type="text" id="returnOrderNumber" placeholder="Номер заказа" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" id="returnDate" placeholder="Дата получения" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <select id="returnReason" required>
+                            <option value="">Причина возврата</option>
+                            <option>Брак/дефект</option>
+                            <option>Не подошел размер</option>
+                            <option>Не подошел цвет</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <textarea id="returnDescription" rows="4" placeholder="Опишите подробно причину возврата" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn--primary btn--large">Отправить заявку на возврат</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        function validateReturnForm() {
+            const name = document.getElementById('returnName').value.trim();
+            const phone = document.getElementById('returnPhone').value.trim();
+            const orderNumber = document.getElementById('returnOrderNumber').value.trim();
+            const date = document.getElementById('returnDate').value;
+            const reason = document.getElementById('returnReason').value;
+            const description = document.getElementById('returnDescription').value.trim();
+            
+            if (!name) { alert('Пожалуйста, введите ваше имя'); return false; }
+            if (!phone) { alert('Пожалуйста, введите телефон'); return false; }
+            if (!orderNumber) { alert('Пожалуйста, введите номер заказа'); return false; }
+            if (!date) { alert('Пожалуйста, укажите дату получения заказа'); return false; }
+            if (!reason) { alert('Пожалуйста, выберите причину возврата'); return false; }
+            if (!description) { alert('Пожалуйста, опишите причину возврата'); return false; }
+            
+            alert('Спасибо! Ваша заявка на возврат принята. Мы свяжемся с вами в течение 24 часов.');
+            return false;
+        }
+    </script>
+</body>
+</html>

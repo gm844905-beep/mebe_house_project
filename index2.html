@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MebelHome — Магазин мебели</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ХЭДЭР (ШАПКА) -->
+    <header class="header">
+        <div class="container header__container">
+            <!-- МЕСТО ДЛЯ ЛОГОТИПА (картинка) -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="MebelHome логотип" class="logo__img">
+                <!-- Если нет SVG, можно использовать PNG: -->
+                <!-- <img src="images/logo.png" alt="MebelHome" class="logo__img"> -->
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <!-- НАВИГАЦИЯ -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <!-- ИКОНКИ -->
+            <div class="header__icons">
+                <a href="#" class="icon-link">
+                    <img src="images/icons/heart.svg" alt="Избранное" class="icon-img">
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="images/icons/cart.svg" alt="Корзина" class="icon-img">
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="images/icons/user.svg" alt="Профиль" class="icon-img">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main>
+
+        <!-- СЕКЦИЯ HERO (БАННЕР С КАРТИНКОЙ) -->
+        <section class="hero">
+            <div class="hero__bg">
+                <!-- МЕСТО ДЛЯ ФОНОВОЙ КАРТИНКИ В БАННЕРЕ -->
+                <img src="images/hero-bg.jpg" alt="Интерьер гостиной" class="hero__bg-img">
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Мебель, в которую <br> влюбляешься</h1>
+                    <p class="hero__text">Дизайн, комфорт и натуральные материалы. Доставка по всей России.</p>
+                    <a href="catalog.html" class="btn btn--primary">Смотреть коллекцию →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ КАТЕГОРИИ С КАРТИНКАМИ -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Выберите категорию</h2>
+                <div class="categories__grid">
+                    
+                    <!-- Категория 1 -->
+                    <div class="category-card">
+                        <div class="category-card__image">
+                            <img src="images/categories/living-room.jpg" alt="Гостиные">
+                        </div>
+                        <span class="category-card__title">Гостиные</span>
+                    </div>
+
+                    <!-- Категория 2 -->
+                    <div class="category-card">
+                        <div class="category-card__image">
+                            <img src="images/categories/bedroom.jpg" alt="Спальни">
+                        </div>
+                        <span class="category-card__title">Спальни</span>
+                    </div>
+
+                    <!-- Категория 3 -->
+                    <div class="category-card">
+                        <div class="category-card__image">
+                            <img src="images/categories/dining.jpg" alt="Столовая">
+                        </div>
+                        <span class="category-card__title">Столовая</span>
+                    </div>
+
+                    <!-- Категория 4 -->
+                    <div class="category-card">
+                        <div class="category-card__image">
+                            <img src="images/categories/office.jpg" alt="Офисная">
+                        </div>
+                        <span class="category-card__title">Офисная</span>
+                    </div>
+
+                    <!-- Категория 5 -->
+                    <div class="category-card">
+                        <div class="category-card__image">
+                            <img src="images/categories/hallway.jpg" alt="Прихожие">
+                        </div>
+                        <span class="category-card__title">Прихожие</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ ТОВАРОВ С КАРТИНКАМИ -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">⭐ Хиты продаж</h2>
+                <div class="products-grid">
+                    
+                    <!-- ТОВАР 1: Диван -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <!-- МЕСТО ДЛЯ ФОТО ДИВАНА -->
+                            <img src="images/products/sofa-comfort.jpg" alt="Диван Комфорт">
+                        </div>
+                        <h3 class="product-card__title">Диван «Комфорт»</h3>
+                        <p class="product-card__desc">Велюр, наполнитель с эффектом памяти</p>
+                        <p class="product-card__price">49 990 ₽</p>
+                        <button class="btn btn--small">В корзину</button>
+                    </div>
+
+                    <!-- ТОВАР 2: Кровать -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <!-- МЕСТО ДЛЯ ФОТО КРОВАТИ -->
+                            <img src="images/products/bed-eco.jpg" alt="Кровать Эко">
+                        </div>
+                        <h3 class="product-card__title">Кровать «Эко»</h3>
+                        <p class="product-card__desc">Массив сосны, ортопедическое основание</p>
+                        <p class="product-card__price">32 500 ₽</p>
+                        <button class="btn btn--small">В корзину</button>
+                    </div>
+
+                    <!-- ТОВАР 3: Стулья -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <!-- МЕСТО ДЛЯ ФОТО СТУЛЬЕВ -->
+                            <img src="images/products/chair-scandi.jpg" alt="Стул Сканди">
+                        </div>
+                        <h3 class="product-card__title">Стул «Сканди»</h3>
+                        <p class="product-card__desc">Дуб, мягкое сиденье, комплект 4 шт</p>
+                        <p class="product-card__price">18 990 ₽</p>
+                        <button class="btn btn--small">В корзину</button>
+                    </div>
+
+                    <!-- ТОВАР 4: Стеллаж -->
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <!-- МЕСТО ДЛЯ ФОТО СТЕЛЛАЖА -->
+                            <img src="images/products/shelf-loft.jpg" alt="Стеллаж Лофт">
+                        </div>
+                        <h3 class="product-card__title">Стеллаж «Лофт»</h3>
+                        <p class="product-card__desc">Металл + дерево, 4 полки</p>
+                        <p class="product-card__price">14 700 ₽</p>
+                        <button class="btn btn--small">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ ПРЕИМУЩЕСТВ (иконки-картинки) -->
+        <section class="advantages">
+            <div class="container advantages__grid">
+                <div class="advantage-item">
+                    <img src="images/icons/delivery.svg" alt="Доставка" class="advantage-icon">
+                    <span>Бесплатная доставка от 50 000₽</span>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/icons/return.svg" alt="Возврат" class="advantage-icon">
+                    <span>Возврат 30 дней</span>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/icons/assembly.svg" alt="Сборка" class="advantage-icon">
+                    <span>Сборка включена в стоимость</span>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/icons/eco.svg" alt="Экологично" class="advantage-icon">
+                    <span>Только экологичные материалы</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <!-- ЛОГОТИП В ФУТЕРЕ (маленький) -->
+                <img src="images/logo-small.svg" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="#">Диваны и кресла</a></li>
+                    <li><a href="#">Кровати и матрасы</a></li>
+                    <li><a href="#">Столы и стулья</a></li>
+                    <li><a href="#">Шкафы и комоды</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>📞 8 (800) 555-35-35</p>
+                <p>✉️ hello@mebelhome.ru</p>
+                <p>📍 Москва, ул. Мебельная, 10</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<div class="header__icons">
+    <a href="#" class="icon-link">❤️</a>
+    <a href="#" class="icon-link">🛒</a>
+    <a href="#" class="icon-link">👤</a>
+</div>

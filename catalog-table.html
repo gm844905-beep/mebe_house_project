@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Столы и стулья — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Столы и стулья</h1>
+            
+            <div class="catalog-filters">
+                <a href="catalog.html" class="filter-btn">Все</a>
+                <a href="catalog-sofa.html" class="filter-btn">Диваны и кресла</a>
+                <a href="catalog-bed.html" class="filter-btn">Кровати и матрасы</a>
+                <a href="catalog-table.html" class="filter-btn active">Столы и стулья</a>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/6696522069.jpg" alt="Стул Сканди">
+                    </div>
+                    <h3 class="product-card__title">Стул «Сканди»</h3>
+                    <p class="product-card__desc">Дуб, мягкое сиденье, комплект 4 шт</p>
+                    <p class="product-card__size">Размер: 45 x 50 x 85 см</p>
+                    <p class="product-card__price">18 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_scandi', 'Стул Сканди', 18990, 'img/6696522069.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stol skandinavija.jpg" alt="Стол обеденный">
+                    </div>
+                    <h3 class="product-card__title">Стол «Скандинавия»</h3>
+                    <p class="product-card__desc">Массив дуба, раздвижной, на 6-8 персон</p>
+                    <p class="product-card__size">Размер: 160 x 90 x 75 см (в раздвинутом виде 220 x 90 x 75 см)</p>
+                    <p class="product-card__price">45 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_skandinavia', 'Стол Скандинавия', 45900, 'img/stol skandinavija.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stul-loft-metal.jpg" alt="Стул Лофт металл">
+                    </div>
+                    <h3 class="product-card__title">Стул «Лофт» металл</h3>
+                    <p class="product-card__desc">Черный металл, сиденье дерево, комплект 4 шт</p>
+                    <p class="product-card__size">Размер: 40 x 45 x 80 см</p>
+                    <p class="product-card__price">5 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_loft_metal', 'Стул Лофт металл', 5990, 'img/stul-loft-metal.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/zhurnal-minimal.jpg" alt="Стол журнальный Минимал">
+                    </div>
+                    <h3 class="product-card__title">Стол журнальный «Минимал»</h3>
+                    <p class="product-card__desc">Стекло + металл, 2 полки, овальная форма</p>
+                    <p class="product-card__size">Размер: 100 x 55 x 45 см</p>
+                    <p class="product-card__price">12 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_minimal', 'Стол журнальный Минимал', 12900, 'img/zhurnal-minimal.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stul_barhat.jpg" alt="Стул Бархат">
+                    </div>
+                    <h3 class="product-card__title">Стул «Бархат»</h3>
+                    <p class="product-card__desc">Бархатная обивка, золотые ножки, комплект 2 шт</p>
+                    <p class="product-card__size">Размер: 50 x 55 x 85 см</p>
+                    <p class="product-card__price">14 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_velvet', 'Стул Бархат', 14900, 'img/stul-velvet.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stol_duboviy.jpg" alt="Стол Дубовый">
+                    </div>
+                    <h3 class="product-card__title">Стол «Дубовый»</h3>
+                    <p class="product-card__desc">Массив дуба, прямоугольный, на 6 персон</p>
+                    <p class="product-card__size">Размер: 180 x 90 x 75 см</p>
+                    <p class="product-card__price">67 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_duboviy', 'Стол Дубовый', 67900, 'img/stol-duboviy.jpg')">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

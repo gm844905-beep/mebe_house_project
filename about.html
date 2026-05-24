@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">О компании</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>MebelHome — это российская компания, основанная в 2015 году. Мы производим и продаём мебель из натурального массива дерева для всей семьи.</p>
+                    
+                    <h3>Наша миссия</h3>
+                    <p>Сделать экологичную мебель доступной для каждого. Мы верим, что дом должен быть не только красивым, но и безопасным для здоровья.</p>
+                    
+                    <h3>Почему выбирают нас</h3>
+                    <ul>
+                        <li>Только массив дерева (сосна, дуб, ясень)</li>
+                        <li>Безопасные лаки и краски на водной основе</li>
+                        <li>Собственное производство в России</li>
+                        <li>Бесплатная доставка от 50 000 рублей</li>
+                        <li>Сборка в подарок</li>
+                        <li>Гарантия 5 лет на всю мебель</li>
+                    </ul>
+                    
+                    <h3>Наше производство</h3>
+                    <p>Мы контролируем каждый этап: от выбора древесины до упаковки готового изделия. Все материалы закупаются у проверенных поставщиков с экологическими сертификатами.</p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">лет на рынке</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">довольных клиентов</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">моделей мебели</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5 лет</div>
+                        <div class="stat-label">гарантии</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MebelHome — Магазин мебели</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__bg">
+                <img src="img/177693715392ec.png" alt="Интерьер гостиной" class="hero__bg-img">
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Мебель, в которую <br> влюбляешься</h1>
+                    <p class="hero__text">Дизайн, комфорт и натуральные материалы. Доставка по всей России.</p>
+                    <a href="catalog.html" class="btn btn--primary">Смотреть коллекцию →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Хиты продаж</h2>
+                <div class="products-grid">                    
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/div-kommfpuslllllll.jpg" alt="Диван Комфорт">
+                        </div>
+                        <h3 class="product-card__title">Диван «Комфорт»</h3>
+                        <p class="product-card__desc">Велюр, наполнитель с эффектом памяти</p>
+                        <p class="product-card__size">Размер: 210 x 90 x 85 см</p>
+                        <p class="product-card__price">49 990 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('divan_comfort', 'Диван Комфорт', 49990, 'img/div-kommfpuslllllll.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg" alt="Кровать Эко">
+                        </div>
+                        <h3 class="product-card__title">Кровать «Эко»</h3>
+                        <p class="product-card__desc">Массив сосны, ортопедическое основание</p>
+                        <p class="product-card__size">Размер: 160 x 200 см</p>
+                        <p class="product-card__price">32 500 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('krovat_eko', 'Кровать Эко', 32500, 'img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/6696522069.jpg" alt="Стул Сканди">
+                        </div>
+                        <h3 class="product-card__title">Стул «Сканди»</h3>
+                        <p class="product-card__desc">Дуб, мягкое сиденье, комплект 4 шт</p>
+                        <p class="product-card__size">Размер: 45 x 50 x 85 см</p>
+                        <p class="product-card__price">18 990 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('stul_scandi', 'Стул Сканди', 18990, 'img/6696522069.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/lofy.jpg" alt="Стеллаж Лофт">
+                        </div>
+                        <h3 class="product-card__title">Стеллаж «Лофт»</h3>
+                        <p class="product-card__desc">Металл + дерево, 4 полки</p>
+                        <p class="product-card__size">Размер: 120 x 35 x 180 см</p>
+                        <p class="product-card__price">14 700 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('stellazh_loft', 'Стеллаж Лофт', 14700, 'img/lofy.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/kreslo_klaSSic.jpg" alt="Кресло Классик">
+                        </div>
+                        <h3 class="product-card__title">Кресло «Классик»</h3>
+                        <p class="product-card__desc">Велюр, мягкое, с подлокотниками</p>
+                        <p class="product-card__size">Размер: 85 x 80 x 90 см</p>
+                        <p class="product-card__price">27 990 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('kreslo_classic', 'Кресло Классик', 27990, 'img/kreslo_klaSSic.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/stol skandinavija.jpg" alt="Стол Скандинавия">
+                        </div>
+                        <h3 class="product-card__title">Стол «Скандинавия»</h3>
+                        <p class="product-card__desc">Массив дуба, раздвижной</p>
+                        <p class="product-card__size">Размер: 160 x 90 x 75 см (в раздвинутом виде 220 x 90 x 75 см)</p>
+                        <p class="product-card__price">45 900 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('stol_skandinavia', 'Стол Скандинавия', 45900, 'img/stol skandinavija.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/krovat-premium.jpg" alt="Кровать Премиум">
+                        </div>
+                        <h3 class="product-card__title">Кровать «Премиум»</h3>
+                        <p class="product-card__desc">Массив дуба, мягкое изголовье</p>
+                        <p class="product-card__size">Размер: 180 x 200 см</p>
+                        <p class="product-card__price">78 900 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('krovat_premium', 'Кровать Премиум', 78900, 'img/krovat-premium.jpg')">В корзину</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="img/stul_barhat.jpg" alt="Стул Бархат">
+                        </div>
+                        <h3 class="product-card__title">Стул «Бархат»</h3>
+                        <p class="product-card__desc">Бархатная обивка, золотые ножки, комплект 2 шт</p>
+                        <p class="product-card__size">Размер: 50 x 55 x 85 см</p>
+                        <p class="product-card__price">14 900 ₽</p>
+                        <button class="btn btn--small" onclick="addToCart('stul_velvet', 'Стул Бархат', 14900, 'img/stul-velvet.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

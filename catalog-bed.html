@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кровати и матрасы — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Кровати и матрасы</h1>
+            
+            <div class="catalog-filters">
+                <a href="catalog.html" class="filter-btn">Все</a>
+                <a href="catalog-sofa.html" class="filter-btn">Диваны и кресла</a>
+                <a href="catalog-bed.html" class="filter-btn active">Кровати и матрасы</a>
+                <a href="catalog-table.html" class="filter-btn">Столы и стулья</a>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg" alt="Кровать Эко">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Эко»</h3>
+                    <p class="product-card__desc">Массив сосны, ортопедическое основание</p>
+                    <p class="product-card__size">Размер: 160 x 200 см</p>
+                    <p class="product-card__price">32 500 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_eko', 'Кровать Эко', 32500, 'img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/krovat-premium.jpg" alt="Кровать Премиум">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Премиум»</h3>
+                    <p class="product-card__desc">Массив дуба, мягкое изголовье, подсветка</p>
+                    <p class="product-card__size">Размер: 180 x 200 см</p>
+                    <p class="product-card__price">78 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_premium', 'Кровать Премиум', 78900, 'img/krovat-premium.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/matras-zdoroviy.jpg" alt="Матрас Здоровый сон">
+                    </div>
+                    <h3 class="product-card__title">Матрас «Здоровый сон»</h3>
+                    <p class="product-card__desc">Кокос + латекс, высота 22 см, ортопедический</p>
+                    <p class="product-card__size">Размер: 160 x 200 см</p>
+                    <p class="product-card__price">24 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('matras_zdoroviy', 'Матрас Здоровый сон', 24900, 'img/matras-zdoroviy.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/tumba-eco.jpg" alt="Тумба прикроватная Эко">
+                    </div>
+                    <h3 class="product-card__title">Тумба прикроватная «Эко»</h3>
+                    <p class="product-card__desc">Массив сосны, 2 выдвижных ящика</p>
+                    <p class="product-card__size">Размер: 45 x 40 x 50 см</p>
+                    <p class="product-card__price">8 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('tumba_eko', 'Тумба прикроватная Эко', 8900, 'img/tumba-eco.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/krovat_lorenco.jpg" alt="Кровать Лоренцо">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Лоренцо»</h3>
+                    <p class="product-card__desc">Массив ясеня, итальянский дизайн, мягкое изголовье</p>
+                    <p class="product-card__size">Размер: 200 x 200 см</p>
+                    <p class="product-card__price">95 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_lorenzo', 'Кровать Лоренцо', 95900, 'img/krovat-lorenzo.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/matras_orto_top.jpg" alt="Матрас Орто Топ">
+                    </div>
+                    <h3 class="product-card__title">Матрас «Орто Топ»</h3>
+                    <p class="product-card__desc">Независимые пружины, кокос, пена memory, высота 25 см</p>
+                    <p class="product-card__size">Размер: 180 x 200 см</p>
+                    <p class="product-card__price">39 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('matras_orto_top', 'Матрас Орто Топ', 39900, 'img/matras-orto-top.jpg')">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

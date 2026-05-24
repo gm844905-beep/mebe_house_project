@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диваны и кресла — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Диваны и кресла</h1>
+            
+            <div class="catalog-filters">
+                <a href="catalog.html" class="filter-btn">Все</a>
+                <a href="catalog-sofa.html" class="filter-btn active">Диваны и кресла</a>
+                <a href="catalog-bed.html" class="filter-btn">Кровати и матрасы</a>
+                <a href="catalog-table.html" class="filter-btn">Столы и стулья</a>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/div-kommfpuslllllll.jpg" alt="Диван Комфорт">
+                    </div>
+                    <h3 class="product-card__title">Диван «Комфорт»</h3>
+                    <p class="product-card__desc">Велюр, наполнитель с эффектом памяти</p>
+                    <p class="product-card__size">Размер: 210 x 90 x 85 см</p>
+                    <p class="product-card__price">49 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_comfort', 'Диван Комфорт', 49990, 'img/div-kommfpuslllllll.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_klaSSic.jpg" alt="Кресло классическое">
+                    </div>
+                    <h3 class="product-card__title">Кресло «Классик»</h3>
+                    <p class="product-card__desc">Велюр, мягкое, с подлокотниками</p>
+                    <p class="product-card__size">Размер: 85 x 80 x 90 см</p>
+                    <p class="product-card__price">27 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_classic', 'Кресло Классик', 27990, 'img/kreslo_klaSSic.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/loft-divan.jpg" alt="Диван угловой Лофт">
+                    </div>
+                    <h3 class="product-card__title">Диван угловой «Лофт»</h3>
+                    <p class="product-card__desc">Рогожка, механизм еврокнижка, спальное место</p>
+                    <p class="product-card__size">Размер: 260 x 170 x 85 см</p>
+                    <p class="product-card__price">68 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_loft', 'Диван угловой Лофт', 68900, 'img/loft-divan.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_vintage.jpg" alt="Кресло-качалка Винтаж">
+                    </div>
+                    <h3 class="product-card__title">Кресло-качалка «Винтаж»</h3>
+                    <p class="product-card__desc">Массив дуба, мягкое сиденье, подлокотники</p>
+                    <p class="product-card__size">Размер: 70 x 85 x 105 см</p>
+                    <p class="product-card__price">34 500 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_vintage', 'Кресло-качалка Винтаж', 34500, 'img/kreslo_vintage.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/divan_presige.jpg" alt="Диван Престиж">
+                    </div>
+                    <h3 class="product-card__title">Диван «Престиж»</h3>
+                    <p class="product-card__desc">Кожа, механизм реклайнер, электропривод</p>
+                    <p class="product-card__size">Размер: 220 x 100 x 90 см</p>
+                    <p class="product-card__price">124 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_prestige', 'Диван Престиж', 124900, 'img/divan-prestige.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_milan.jpg" alt="Кресло Милан">
+                    </div>
+                    <h3 class="product-card__title">Кресло «Милан»</h3>
+                    <p class="product-card__desc">Эко-кожа, хромированные ножки, поворотное</p>
+                    <p class="product-card__size">Размер: 75 x 75 x 85 см</p>
+                    <p class="product-card__price">19 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_milan', 'Кресло Милан', 19990, 'img/kreslo-milan.jpg')">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

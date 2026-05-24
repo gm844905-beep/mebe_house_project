@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Доставка и оплата</h1>
+            
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <div class="delivery-icon">🚚</div>
+                    <h3>Бесплатная доставка</h3>
+                    <p>При заказе от 50 000 рублей доставка по всей России бесплатно.</p>
+                    <p class="delivery-note">*Для заказов менее 50 000 ₽ — 1 500 ₽</p>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-icon">📅</div>
+                    <h3>Сроки доставки</h3>
+                    <p>Москва и область: 1-3 дня</p>
+                    <p>Санкт-Петербург: 2-4 дня</p>
+                    <p>Другие города: 3-7 дней</p>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-icon">🔧</div>
+                    <h3>Сборка</h3>
+                    <p>Сборка входит в стоимость. Приедем, соберём, уберём мусор.</p>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-icon">💳</div>
+                    <h3>Способы оплаты</h3>
+                    <p>Наличными курьеру</p>
+                    <p>Банковской картой онлайн</p>
+                    <p>Оплата по счету для юрлиц</p>
+                </div>
+            </div>
+
+            <div class="delivery-order-button">
+                <a href="cart.html" class="btn btn--primary btn--large">Оформить заказ →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

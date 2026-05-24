@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — MebelHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="MebelHome логотип" class="logo__img">
+                <span class="logo__text">MebelHome</span>
+            </a>
+            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li>
+                        <a href="cart.html" class="nav__link">
+                            Корзина
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="overlay" id="overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Каталог мебели</h1>
+            
+    <div class="catalog-filters">
+    <button onclick="location.href='catalog.html'" class="filter-btn active">Все</button>
+    <button onclick="location.href='catalog-sofa.html'" class="filter-btn">Диваны и кресла</button>
+    <button onclick="location.href='catalog-bed.html'" class="filter-btn">Кровати и матрасы</button>
+    <button onclick="location.href='catalog-table.html'" class="filter-btn">Столы и стулья</button>
+</div>
+
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/div-kommfpuslllllll.jpg" alt="Диван Комфорт">
+                    </div>
+                    <h3 class="product-card__title">Диван «Комфорт»</h3>
+                    <p class="product-card__desc">Велюр, наполнитель с эффектом памяти</p>
+                    <p class="product-card__size">Размер: 210 x 90 x 85 см</p>
+                    <p class="product-card__price">49 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_comfort', 'Диван Комфорт', 49990, 'img/div-kommfpuslllllll.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_klaSSic.jpg" alt="Кресло классическое">
+                    </div>
+                    <h3 class="product-card__title">Кресло «Классик»</h3>
+                    <p class="product-card__desc">Велюр, мягкое, с подлокотниками</p>
+                    <p class="product-card__size">Размер: 85 x 80 x 90 см</p>
+                    <p class="product-card__price">27 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_classic', 'Кресло Классик', 27990, 'img/kreslo_klaSSic.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/loft-divan.jpg" alt="Диван угловой Лофт">
+                    </div>
+                    <h3 class="product-card__title">Диван угловой «Лофт»</h3>
+                    <p class="product-card__desc">Рогожка, механизм еврокнижка</p>
+                    <p class="product-card__size">Размер: 260 x 170 x 85 см</p>
+                    <p class="product-card__price">68 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_loft', 'Диван угловой Лофт', 68900, 'img/loft-divan.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_vintage.jpg" alt="Кресло-качалка Винтаж">
+                    </div>
+                    <h3 class="product-card__title">Кресло-качалка «Винтаж»</h3>
+                    <p class="product-card__desc">Массив дуба, мягкое сиденье</p>
+                    <p class="product-card__size">Размер: 70 x 85 x 105 см</p>
+                    <p class="product-card__price">34 500 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_vintage', 'Кресло-качалка Винтаж', 34500, 'img/kreslo_vintage.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/divan_presige.jpg" alt="Диван Престиж">
+                    </div>
+                    <h3 class="product-card__title">Диван «Престиж»</h3>
+                    <p class="product-card__desc">Кожа, механизм реклайнер, электропривод</p>
+                    <p class="product-card__size">Размер: 220 x 100 x 90 см</p>
+                    <p class="product-card__price">124 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('divan_prestige', 'Диван Престиж', 124900, 'img/divan-prestige.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kreslo_milan.jpg" alt="Кресло Милан">
+                    </div>
+                    <h3 class="product-card__title">Кресло «Милан»</h3>
+                    <p class="product-card__desc">Эко-кожа, хромированные ножки, поворотное</p>
+                    <p class="product-card__size">Размер: 75 x 75 x 85 см</p>
+                    <p class="product-card__price">19 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('kreslo_milan', 'Кресло Милан', 19990, 'img/kreslo-milan.jpg')">В корзину</button>
+                </div>
+
+                <!-- Кровати и матрасы (6 товаров) -->
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg" alt="Кровать Эко">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Эко»</h3>
+                    <p class="product-card__desc">Массив сосны, ортопедическое основание</p>
+                    <p class="product-card__size">Размер: 160 x 200 см</p>
+                    <p class="product-card__price">32 500 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_eko', 'Кровать Эко', 32500, 'img/08_72132-LDSP-Krovat-EKO-1_2-Venge_Loredo-4-kopiya.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/krovat-premium.jpg" alt="Кровать Премиум">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Премиум»</h3>
+                    <p class="product-card__desc">Массив дуба, мягкое изголовье, подсветка</p>
+                    <p class="product-card__size">Размер: 180 x 200 см</p>
+                    <p class="product-card__price">78 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_premium', 'Кровать Премиум', 78900, 'img/krovat-premium.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/matras-zdoroviy.jpg" alt="Матрас Здоровый сон">
+                    </div>
+                    <h3 class="product-card__title">Матрас «Здоровый сон»</h3>
+                    <p class="product-card__desc">Кокос + латекс, высота 22 см</p>
+                    <p class="product-card__size">Размер: 160 x 200 см</p>
+                    <p class="product-card__price">24 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('matras_zdoroviy', 'Матрас Здоровый сон', 24900, 'img/matras-zdoroviy.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/tumba-eco.jpg" alt="Тумба прикроватная Эко">
+                    </div>
+                    <h3 class="product-card__title">Тумба прикроватная «Эко»</h3>
+                    <p class="product-card__desc">Массив сосны, 2 выдвижных ящика</p>
+                    <p class="product-card__size">Размер: 45 x 40 x 50 см</p>
+                    <p class="product-card__price">8 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('tumba_eko', 'Тумба прикроватная Эко', 8900, 'img/tumba-eco.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/krovat_lorenco.jpg" alt="Кровать Лоренцо">
+                    </div>
+                    <h3 class="product-card__title">Кровать «Лоренцо»</h3>
+                    <p class="product-card__desc">Массив ясеня, итальянский дизайн</p>
+                    <p class="product-card__size">Размер: 200 x 200 см</p>
+                    <p class="product-card__price">95 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('krovat_lorenzo', 'Кровать Лоренцо', 95900, 'img/krovat-lorenzo.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/matras_orto_top.jpg" alt="Матрас Орто Топ">
+                    </div>
+                    <h3 class="product-card__title">Матрас «Орто Топ»</h3>
+                    <p class="product-card__desc">Независимые пружины, кокос, пена memory</p>
+                    <p class="product-card__size">Размер: 180 x 200 см</p>
+                    <p class="product-card__price">39 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('matras_orto_top', 'Матрас Орто Топ', 39900, 'img/matras-orto-top.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/6696522069.jpg" alt="Стул Сканди">
+                    </div>
+                    <h3 class="product-card__title">Стул «Сканди»</h3>
+                    <p class="product-card__desc">Дуб, мягкое сиденье, комплект 4 шт</p>
+                    <p class="product-card__size">Размер: 45 x 50 x 85 см</p>
+                    <p class="product-card__price">18 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_scandi', 'Стул Сканди', 18990, 'img/6696522069.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stol skandinavija.jpg" alt="Стол обеденный">
+                    </div>
+                    <h3 class="product-card__title">Стол «Скандинавия»</h3>
+                    <p class="product-card__desc">Массив дуба, раздвижной</p>
+                    <p class="product-card__size">Размер: 160 x 90 x 75 см (в раздвинутом виде 220 x 90 x 75 см)</p>
+                    <p class="product-card__price">45 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_skandinavia', 'Стол Скандинавия', 45900, 'img/stol skandinavija.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stul-loft-metal.jpg" alt="Стул Лофт металл">
+                    </div>
+                    <h3 class="product-card__title">Стул «Лофт» металл</h3>
+                    <p class="product-card__desc">Черный металл, сиденье дерево, комплект 4 шт</p>
+                    <p class="product-card__size">Размер: 40 x 45 x 80 см</p>
+                    <p class="product-card__price">5 990 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_loft_metal', 'Стул Лофт металл', 5990, 'img/stul-loft-metal.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/zhurnal-minimal.jpg" alt="Стол журнальный Минимал">
+                    </div>
+                    <h3 class="product-card__title">Стол журнальный «Минимал»</h3>
+                    <p class="product-card__desc">Стекло + металл, 2 полки, овальная форма</p>
+                    <p class="product-card__size">Размер: 100 x 55 x 45 см</p>
+                    <p class="product-card__price">12 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_minimal', 'Стол журнальный Минимал', 12900, 'img/zhurnal-minimal.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stul_barhat.jpg" alt="Стул Бархат">
+                    </div>
+                    <h3 class="product-card__title">Стул «Бархат»</h3>
+                    <p class="product-card__desc">Бархатная обивка, золотые ножки, комплект 2 шт</p>
+                    <p class="product-card__size">Размер: 50 x 55 x 85 см</p>
+                    <p class="product-card__price">14 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stul_velvet', 'Стул Бархат', 14900, 'img/stul-velvet.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/stol_duboviy.jpg" alt="Стол Дубовый">
+                    </div>
+                    <h3 class="product-card__title">Стол «Дубовый»</h3>
+                    <p class="product-card__desc">Массив дуба, прямоугольный, на 6 персон</p>
+                    <p class="product-card__size">Размер: 180 x 90 x 75 см</p>
+                    <p class="product-card__price">67 900 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stol_duboviy', 'Стол Дубовый', 67900, 'img/stol-duboviy.jpg')">В корзину</button>
+                </div>
+
+                <!-- Дополнительные товары -->
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/lofy.jpg" alt="Стеллаж Лофт">
+                    </div>
+                    <h3 class="product-card__title">Стеллаж «Лофт»</h3>
+                    <p class="product-card__desc">Металл + дерево, 4 полки</p>
+                    <p class="product-card__size">Размер: 120 x 35 x 180 см</p>
+                    <p class="product-card__price">14 700 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('stellazh_loft', 'Стеллаж Лофт', 14700, 'img/lofy.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/kupe.jpg" alt="Шкаф купе Прованс">
+                    </div>
+                    <h3 class="product-card__title">Шкаф купе «Прованс»</h3>
+                    <p class="product-card__desc">Зеркальные двери, 3 секции</p>
+                    <p class="product-card__size">Размер: 200 x 60 x 220 см</p>
+                    <p class="product-card__price">67 800 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('shkaf_provans', 'Шкаф купе Прованс', 67800, 'img/kupe.jpg')">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="img/tumba_minimal.png" alt="Тумба Минимал">
+                    </div>
+                    <h3 class="product-card__title">Тумба «Минимал»</h3>
+                    <p class="product-card__desc">Дуб, 2 выдвижных ящика</p>
+                    <p class="product-card__size">Размер: 50 x 40 x 55 см</p>
+                    <p class="product-card__price">12 500 ₽</p>
+                    <button class="btn btn--small" onclick="addToCart('tumba_minimal', 'Тумба Минимал', 12500, 'img/tumba_minimal.png')">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <img src="img/logo.png" alt="MebelHome" class="footer-logo">
+                <p>Современная мебель для вашего дома.</p>
+                <p>Работаем с 2015 года</p>
+            </div>
+            <div class="footer__col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="catalog-sofa.html">Диваны и кресла</a></li>
+                    <li><a href="catalog-bed.html">Кровати и матрасы</a></li>
+                    <li><a href="catalog-table.html">Столы и стулья</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="guarantee.html">Гарантия</a></li>
+                    <li><a href="return.html">Возврат</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>8 (800) 555-35-35</p>
+                <p>hello@mebelhome.ru</p>
+                <p>Челябинск, ул. Сони Кривой, 26</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2025 MebelHome — Магазин мебели. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
